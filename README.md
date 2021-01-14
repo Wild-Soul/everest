@@ -1,4 +1,5 @@
-# natours
-a web-app to for booking tours.
+# everest
 
-Part of a course on Udemy by Jonas Schmedtmann
+A tour and travel API using Node.js, Express.js. For data storage using mongoDB Atlas.
+
+Part of course by  Jonas Schmedtmann.
