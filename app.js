@@ -8,6 +8,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const reviewRouter = require('./routes/reviewRoutes');
 
 const globalErrorHandler = require('./controller/errorController');
 const { mongo } = require("mongoose");
@@ -44,6 +45,7 @@ app.use(express.static((`${__dirname}/public`)))
 // ROUTE HANDLERS FOR USER.
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/reviews', reviewRouter);
 
 app.all('*',(req,res,next) => {
     // const err = new Error(`Can't find the ${req.originalUrl} on this server!`);
